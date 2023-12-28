@@ -1,13 +1,13 @@
 {
   "name": "sync-work",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "release": "standard-version --preset angular",
+    "release": "standard-version",
     "format:fix": "pretty-quick --staged",
     "format:check": "prettier --check --loglevel error \"**/*{.ts,.js,.json,.css,.scss,.html}\"",
     "format:all": "prettier --write \"**/*{.ts,.js,.json,.css,.scss,.html}\""
