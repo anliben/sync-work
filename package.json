@@ -1,12 +1,16 @@
 {
   "name": "sync-work",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "release": "standard-version --preset angular",
+    "format:fix": "pretty-quick --staged",
+    "format:check": "prettier --check --loglevel error \"**/*{.ts,.js,.json,.css,.scss,.html}\"",
+    "format:all": "prettier --write \"**/*{.ts,.js,.json,.css,.scss,.html}\""
   },
   "private": true,
   "dependencies": {
@@ -18,7 +22,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "rxjs": "~7.8.0",
+    "@po-ui/ng-components": "^16.10.0",
+    "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -26,13 +31,31 @@
     "@angular-devkit/build-angular": "^16.2.11",
     "@angular/cli": "^16.2.11",
     "@angular/compiler-cli": "^16.2.0",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-angular": "^18.4.3",
     "@types/jasmine": "~4.3.0",
+    "codelyzer": "^6.0.2",
+    "husky": "^8.0.3",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.1.1",
+    "pretty-quick": "^3.1.3",
+    "standard-version": "^9.5.0",
     "typescript": "~5.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
   }
 }
