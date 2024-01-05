@@ -1,0 +1,36 @@
+{
+  "colaboradores": {
+    "items": [
+      {
+        "id": 1,
+        "nome": "Lucas"
+      },
+      {
+        "id": 2,
+        "nome": "Davi"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "id": 1,
+      "label": "home",
+      "link": "/"
+    },
+    {
+      "id": 2,
+      "label": "colaboradores",
+      "link": "/colaboradores"
+    },
+    {
+      "id": 3,
+      "label": "clientes",
+      "link": "/clientes"
+    },
+    {
+      "id": 4,
+      "label": "projetos",
+      "link": "/projetos"
+    }
+  ]
+}

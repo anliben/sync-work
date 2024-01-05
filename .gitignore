@@ -14,8 +14,6 @@ yarn-error.log
 package-lock.json
 yarn.lock
 
-db.json
-
 # IDEs and editors
 .idea/
 .project

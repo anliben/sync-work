@@ -8,10 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './core/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { PoTemplatesModule } from '@po-ui/ng-templates';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, PoModule, HttpClientModule, RouterModule.forRoot([]), SharedModule],
+  declarations: [AppComponent, HomeComponent, LoginComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PoModule,
+    HttpClientModule,
+    RouterModule.forRoot([]),
+    SharedModule,
+    PoTemplatesModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
