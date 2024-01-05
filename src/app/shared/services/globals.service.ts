@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalsService {
 
-  baseUrl: string = 'https://my-json-server.typicode.com/anliben/demo'
+  baseUrl: string = 'http://localhost:3000'
 
   constructor() { }
 
