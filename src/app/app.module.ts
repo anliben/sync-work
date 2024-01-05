@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './core/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PoModule, HttpClientModule, RouterModule.forRoot([])],
+  declarations: [AppComponent, HomeComponent],
+  imports: [BrowserModule, AppRoutingModule, PoModule, HttpClientModule, RouterModule.forRoot([]), SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })
